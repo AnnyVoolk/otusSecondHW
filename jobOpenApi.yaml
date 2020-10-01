@@ -1,0 +1,103 @@
+openapi: 3.0.1
+info:
+  title: Github Jobs
+  description: 'Github Jobs'
+  version: 1.0.0
+externalDocs:
+  description: API Root
+  url: https://jobs.github.com
+servers:
+- url: https://jobs.github.com
+tags:
+- name: jobs
+  description: Get All jobs
+- name: job
+  description: Get current job description
+paths:
+  /positions.json:
+    get:
+      tags:
+      - jobs
+      summary: Get Jobs
+      operationId: getJobs
+      parameters:
+        - name: description
+          in: query
+          description: job description
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Paging
+          schema:
+            type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobList'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+  /positions/:
+      get:
+        tags:
+        - job
+        summary: Get Jobs
+        operationId: getCurrentJob
+        responses:
+          200:
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Job'
+components:
+  schemas:
+    JobList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Job"
+    Job:
+      type: object
+      properties:
+        id:
+          type: string
+        tupe:
+          type: string
+        url:
+          type: string
+        created_at:
+            type: string
+        company:
+            type: string
+        company_url:
+            type: string
+        location:
+            type: string
+        title:
+            type: string
+        description:
+            type: string
+        how_to_apply:
+            type: string
+        company_logo:
+            type: string
+    ErrorModel:
+      type: object
+      required:
+      - message
+      - code
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+          minimum: 100
+          maximum: 600
