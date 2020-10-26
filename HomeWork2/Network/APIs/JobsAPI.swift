@@ -7,19 +7,17 @@
 
 import Foundation
 
+protocol IJobsApiService {
+    
+    func getJobs(description: String, page: Int?, completion: @escaping ((_ data: [Job]?, _ error: Error?) -> Void))
+    func getCurrentJob(id: String, completion: @escaping ((_ data: Job?,_ error: Error?) -> Void))
+}
 
-
-open class JobsAPI {
-    /**
-     Get Jobs
-     
-     - parameter description: (query) job description 
-     - parameter page: (query) Paging (optional)
-     - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getJobs(description: String, page: Int? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: [Job]?,_ error: Error?) -> Void)) {
-        getJobsWithRequestBuilder(description: description, page: page).execute(apiResponseQueue) { result -> Void in
+open class JobsAPI: IJobsApiService {
+    
+    
+    func getJobs(description: String, page: Int?, completion: @escaping ((_ data: [Job]?, _ error: Error?) -> Void)) {
+        self.getJobsWithRequestBuilder(description: description, page: page).execute(OpenAPIClientAPI.apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -28,15 +26,19 @@ open class JobsAPI {
             }
         }
     }
-
-    /**
-     Get Jobs
-     - GET /positions.json
-     - parameter description: (query) job description 
-     - parameter page: (query) Paging (optional)
-     - returns: RequestBuilder<[Job]> 
-     */
-    open class func getJobsWithRequestBuilder(description: String, page: Int? = nil) -> RequestBuilder<[Job]> {
+    
+    func getCurrentJob(id: String, completion: @escaping ((_ data: Job?,_ error: Error?) -> Void)) {
+           getCurrentJobWithRequestBuilder(id: id).execute(OpenAPIClientAPI.apiResponseQueue) { result -> Void in
+               switch result {
+               case let .success(response):
+                   completion(response.body, nil)
+               case let .failure(error):
+                   completion(nil, error)
+               }
+           }
+       }
+   
+    func getJobsWithRequestBuilder(description: String, page: Int? = nil) -> RequestBuilder<[Job]> {
         let path = "/positions.json"
         let URLString = OpenAPIClientAPI.jobBasePath + path
         let parameters: [String:Any]? = nil
@@ -52,4 +54,15 @@ open class JobsAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 
+    func getCurrentJobWithRequestBuilder(id: String) -> RequestBuilder<Job> {
+        let path = "/positions/\(id).json"
+        let URLString = OpenAPIClientAPI.jobBasePath + path
+        let parameters: [String:Any]? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Job>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
 }

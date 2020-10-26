@@ -7,20 +7,16 @@
 
 import Foundation
 
+protocol IRecipeApiService {
+    
+    func getRecipe(type: RecipesSearchType, p: Int?, completion: @escaping ((_ data: RecipeList?,_ error: Error?) -> Void))
+}
 
-
-open class RecipeAPI {
-    /**
-     Get Recipe
-     
-     - parameter i: (query) Ingredient 
-     - parameter q: (query) Query (optional)
-     - parameter p: (query) Paging (optional)
-     - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getRecipe(i: String, q: String? = nil, p: Int? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: RecipeList?,_ error: Error?) -> Void)) {
-        getRecipeWithRequestBuilder(i: i, q: q, p: p).execute(apiResponseQueue) { result -> Void in
+open class RecipeAPI: IRecipeApiService {
+    
+    /// i: (query) Ingredient, p: (query) Paging (optional)
+    func getRecipe(type: RecipesSearchType, p: Int?, completion: @escaping ((_ data: RecipeList?,_ error: Error?) -> Void)) {
+        self.getRecipeWithRequestBuilder(i: type.searchText, p: p).execute(OpenAPIClientAPI.apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -29,24 +25,16 @@ open class RecipeAPI {
             }
         }
     }
-
-    /**
-     Get Recipe
-     - GET /api/
-     - parameter i: (query) Ingredient 
-     - parameter q: (query) Query (optional)
-     - parameter p: (query) Paging (optional)
-     - returns: RequestBuilder<RecipeList> 
-     */
-    open class func getRecipeWithRequestBuilder(i: String, q: String? = nil, p: Int? = nil) -> RequestBuilder<RecipeList> {
+    
+    /// i: (query) Ingredient, p: (query) Paging (optional)
+    func getRecipeWithRequestBuilder(i: String, p: Int? = nil) -> RequestBuilder<RecipeList> {
         let path = "/api/"
         let URLString = OpenAPIClientAPI.recepiesBasePath + path
         let parameters: [String:Any]? = nil
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "i": i.encodeToJSON(), 
-            "q": q?.encodeToJSON(), 
+            "i": i.encodeToJSON(),
             "p": p?.encodeToJSON()
         ])
 

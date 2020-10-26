@@ -10,32 +10,38 @@ import Foundation
 
 class JobsViewModel: ObservableObject {
     
+    @Published private var jobsNetWorkService: IJobsApiService?
+    
     @Published private(set) var jobList = [Job]()
     
     @Published private(set) var isPageLoading = false
     
     @Published private(set) var page = 0
     
-    func fetchJobs() {
-        guard !isPageLoading else { return }
+    @Published private var cashService: ICashService?
     
-        isPageLoading = true
-        JobsAPI.getJobs(description: "ios", page: page) { list, error in
-            self.page += 1
-            self.isPageLoading = false
-            if let list = list {
-                self.jobList.append(contentsOf: list)
-            }
-        }
+    init() {
+        self.jobsNetWorkService = ServiceLocator.shared.getService(type: IJobsApiService.self)
+        self.cashService = ServiceLocator.shared.getService(type: ICashService.self)
     }
     
-    func getJob(with id: String?) {
-        guard let id = id else { return }
+    func upGreatPage() {
+        self.page += 1
+    }
     
-        JobAPI.getCurrentJob(id: id) { job, error in
-            if let job = job {
-                print(job)
-            }
+    func fetchJobs() {
+        guard let cashPage = self.cashService?.getCashData(type: .jobsPage) as? Int,
+            cashPage >= self.page, !isPageLoading else {
+                
+                isPageLoading = true
+                self.jobsNetWorkService?.getJobs(description: "ios", page: self.page) { list, error in
+                    self.isPageLoading = false
+                    if let list = list {
+                        self.cashService?.addCashData(data: self.page, type: .jobsPage)
+                        self.jobList.append(contentsOf: list)
+                    }
+                }
+                return
         }
     }
 }

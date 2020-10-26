@@ -20,6 +20,7 @@ struct JobsScreenList: View {
                     title: job.title ?? "",
                     description: "Company: \(job.company ?? "")") .onAppear() {
                     if self.viewModel.jobList.isLast(job) {
+                        self.viewModel.upGreatPage()
                         self.viewModel.fetchJobs()
                     }
                 }.onTapGesture {

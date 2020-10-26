@@ -22,7 +22,7 @@ struct CurrentJobScreen: View {
             if self.viewModel.isPageLoading {
                 ActivityIndicatorView(style: .medium)
             } else {
-                FakeNavBar(label: viewModel.job?.title ?? "")
+                FakeNavBar(label: viewModel.job?.title ?? "", backAction: { self.viewModel.removeCashJob() })
                 Spacer()
                 Text(viewModel.job?.company ?? "")
                     .font(.title)

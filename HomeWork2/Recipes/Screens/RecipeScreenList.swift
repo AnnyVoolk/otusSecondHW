@@ -17,6 +17,7 @@ struct RecipesScreenList: View {
             ForEach(viewModel.listDataSource) { recipe in
                 RecipeScreenRecipeCell(title: recipe.titleTrimmed, description: recipe.ingredients ?? "") .onAppear() {
                     if self.viewModel.listDataSource.isLast(recipe) {
+                        self.viewModel.upGreatPage()
                         self.viewModel.fetchPage()
                     }
                 }
