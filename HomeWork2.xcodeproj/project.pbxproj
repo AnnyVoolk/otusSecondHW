@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,23 +26,8 @@
 		04BBC46125235A48004D14B2 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC46025235A48004D14B2 /* Screen.swift */; };
 		04BBC46325236940004D14B2 /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC46225236940004D14B2 /* FakeNavBar.swift */; };
 		04BBC46525236F5D004D14B2 /* NavControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC46425236F5D004D14B2 /* NavControllerViewModel.swift */; };
-		04BBC49F25239A37004D14B2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC48B25239A36004D14B2 /* Configuration.swift */; };
-		04BBC4A025239A37004D14B2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC48C25239A36004D14B2 /* Models.swift */; };
-		04BBC4A125239A37004D14B2 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC48D25239A36004D14B2 /* CodableHelper.swift */; };
-		04BBC4A225239A37004D14B2 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC48E25239A36004D14B2 /* SynchronizedDictionary.swift */; };
-		04BBC4A325239A37004D14B2 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC48F25239A36004D14B2 /* APIs.swift */; };
-		04BBC4A425239A37004D14B2 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49025239A36004D14B2 /* JSONDataEncoding.swift */; };
-		04BBC4A525239A37004D14B2 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49125239A37004D14B2 /* OpenISO8601DateFormatter.swift */; };
-		04BBC4A625239A37004D14B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49225239A37004D14B2 /* Extensions.swift */; };
 		04BBC4A725239A37004D14B2 /* JobsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49425239A37004D14B2 /* JobsAPI.swift */; };
 		04BBC4A925239A37004D14B2 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49625239A37004D14B2 /* RecipeAPI.swift */; };
-		04BBC4AA25239A37004D14B2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49825239A37004D14B2 /* Recipe.swift */; };
-		04BBC4AB25239A37004D14B2 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49925239A37004D14B2 /* ErrorModel.swift */; };
-		04BBC4AC25239A37004D14B2 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49A25239A37004D14B2 /* RecipeList.swift */; };
-		04BBC4AD25239A37004D14B2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49B25239A37004D14B2 /* Job.swift */; };
-		04BBC4AE25239A37004D14B2 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49C25239A37004D14B2 /* JSONEncodingHelper.swift */; };
-		04BBC4AF25239A37004D14B2 /* URLSessionImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49D25239A37004D14B2 /* URLSessionImplementations.swift */; };
-		04BBC4B025239A37004D14B2 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC49E25239A37004D14B2 /* APIHelper.swift */; };
 		04C811C6252231DF0070D7AF /* JobsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C811C5252231DF0070D7AF /* JobsScreen.swift */; };
 		04E992C22525C22500F418C8 /* CurrentJobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E992C12525C22500F418C8 /* CurrentJobViewModel.swift */; };
 		04E992C42525D2B600F418C8 /* JobDescriptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E992C32525D2B600F418C8 /* JobDescriptionScreen.swift */; };
@@ -60,6 +45,7 @@
 		04F8257B2546E2B700D4A4EB /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8257A2546E2B700D4A4EB /* AppConfig.swift */; };
 		04F8257F2546FC9900D4A4EB /* CashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8257E2546FC9900D4A4EB /* CashService.swift */; };
 		04F825832547121E00D4A4EB /* CashName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F825822547121E00D4A4EB /* CashName.swift */; };
+		04F825AB2548987300D4A4EB /* OtusNetWork in Frameworks */ = {isa = PBXBuildFile; productRef = 04F825AA2548987300D4A4EB /* OtusNetWork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,23 +70,8 @@
 		04BBC46025235A48004D14B2 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		04BBC46225236940004D14B2 /* FakeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavBar.swift; sourceTree = "<group>"; };
 		04BBC46425236F5D004D14B2 /* NavControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavControllerViewModel.swift; sourceTree = "<group>"; };
-		04BBC48B25239A36004D14B2 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		04BBC48C25239A36004D14B2 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		04BBC48D25239A36004D14B2 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
-		04BBC48E25239A36004D14B2 /* SynchronizedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedDictionary.swift; sourceTree = "<group>"; };
-		04BBC48F25239A36004D14B2 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		04BBC49025239A36004D14B2 /* JSONDataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataEncoding.swift; sourceTree = "<group>"; };
-		04BBC49125239A37004D14B2 /* OpenISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenISO8601DateFormatter.swift; sourceTree = "<group>"; };
-		04BBC49225239A37004D14B2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04BBC49425239A37004D14B2 /* JobsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsAPI.swift; sourceTree = "<group>"; };
 		04BBC49625239A37004D14B2 /* RecipeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
-		04BBC49825239A37004D14B2 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		04BBC49925239A37004D14B2 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
-		04BBC49A25239A37004D14B2 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
-		04BBC49B25239A37004D14B2 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		04BBC49C25239A37004D14B2 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
-		04BBC49D25239A37004D14B2 /* URLSessionImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionImplementations.swift; sourceTree = "<group>"; };
-		04BBC49E25239A37004D14B2 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		04C811C5252231DF0070D7AF /* JobsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsScreen.swift; sourceTree = "<group>"; };
 		04E992C12525C22500F418C8 /* CurrentJobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentJobViewModel.swift; sourceTree = "<group>"; };
 		04E992C32525D2B600F418C8 /* JobDescriptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionScreen.swift; sourceTree = "<group>"; };
@@ -125,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F825AB2548987300D4A4EB /* OtusNetWork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +116,6 @@
 			children = (
 				04E992E225260CDF00F418C8 /* JobsScreens */,
 				047540D22524C77700D7BAB9 /* Job */,
-				046B54FB252216BD000A5EF4 /* JobsViewModel.swift */,
 				04C811C5252231DF0070D7AF /* JobsScreen.swift */,
 			);
 			path = Jobs;
@@ -169,15 +140,9 @@
 		046C964825134A0C008D580B /* HomeWork2 */ = {
 			isa = PBXGroup;
 			children = (
-				04F8257D2546FC8500D4A4EB /* Cash */,
-				04F8257C2546F6D100D4A4EB /* AppConfig */,
-				04F825772546DC9F00D4A4EB /* ServiceLocator */,
-				04BBC48A25238042004D14B2 /* Network */,
-				04BBC459252359A9004D14B2 /* Enums */,
-				04BBC45225235819004D14B2 /* Extensions */,
-				04BBC447252342D3004D14B2 /* NavStack */,
+				04F8259825488C1F00D4A4EB /* Model */,
+				04F8259725488C1000D4A4EB /* UI */,
 				046B54D3252214EE000A5EF4 /* Jobs */,
-				046B54D02521F617000A5EF4 /* HelperView */,
 				046C965D25139892008D580B /* Recipes */,
 				046C964925134A0C008D580B /* AppDelegate.swift */,
 				046C964B25134A0C008D580B /* SceneDelegate.swift */,
@@ -201,10 +166,10 @@
 		046C965D25139892008D580B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				04E992D82526029900F418C8 /* Screens */,
-				046B54CC251F58FA000A5EF4 /* RecipesViewModel.swift */,
-				04E992D42526020A00F418C8 /* FruitsRecipesViewModel.swift */,
-				04E992D62526024000F418C8 /* VegetablesRecipesViewModel.swift */,
+				046B54CE251F6117000A5EF4 /* RecipeScreenList.swift */,
+				04E992D9252602C900F418C8 /* FruitsRecipes.swift */,
+				04E992DB252602F400F418C8 /* VegetablesRecipes.swift */,
+				04E992DD2526033D00F418C8 /* RecipeScreenRecipeCell.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -213,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				04E992E025260CCC00F418C8 /* CurrentJobScreen.swift */,
-				04E992C12525C22500F418C8 /* CurrentJobViewModel.swift */,
 				04E992C32525D2B600F418C8 /* JobDescriptionScreen.swift */,
 			);
 			path = Job;
@@ -260,55 +224,13 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		04BBC48A25238042004D14B2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				04BBC49E25239A37004D14B2 /* APIHelper.swift */,
-				04BBC49325239A37004D14B2 /* APIs */,
-				04BBC48F25239A36004D14B2 /* APIs.swift */,
-				04BBC48D25239A36004D14B2 /* CodableHelper.swift */,
-				04BBC48B25239A36004D14B2 /* Configuration.swift */,
-				04BBC49225239A37004D14B2 /* Extensions.swift */,
-				04BBC49025239A36004D14B2 /* JSONDataEncoding.swift */,
-				04BBC49C25239A37004D14B2 /* JSONEncodingHelper.swift */,
-				04BBC49725239A37004D14B2 /* Models */,
-				04BBC48C25239A36004D14B2 /* Models.swift */,
-				04BBC49125239A37004D14B2 /* OpenISO8601DateFormatter.swift */,
-				04BBC48E25239A36004D14B2 /* SynchronizedDictionary.swift */,
-				04BBC49D25239A37004D14B2 /* URLSessionImplementations.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		04BBC49325239A37004D14B2 /* APIs */ = {
+		04BBC49325239A37004D14B2 /* APIsServices */ = {
 			isa = PBXGroup;
 			children = (
 				04BBC49425239A37004D14B2 /* JobsAPI.swift */,
 				04BBC49625239A37004D14B2 /* RecipeAPI.swift */,
 			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
-		04BBC49725239A37004D14B2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				04BBC49825239A37004D14B2 /* Recipe.swift */,
-				04BBC49925239A37004D14B2 /* ErrorModel.swift */,
-				04BBC49A25239A37004D14B2 /* RecipeList.swift */,
-				04BBC49B25239A37004D14B2 /* Job.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		04E992D82526029900F418C8 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				046B54CE251F6117000A5EF4 /* RecipeScreenList.swift */,
-				04E992D9252602C900F418C8 /* FruitsRecipes.swift */,
-				04E992DB252602F400F418C8 /* VegetablesRecipes.swift */,
-				04E992DD2526033D00F418C8 /* RecipeScreenRecipeCell.swift */,
-			);
-			path = Screens;
+			path = APIsServices;
 			sourceTree = "<group>";
 		};
 		04E992E225260CDF00F418C8 /* JobsScreens */ = {
@@ -344,6 +266,65 @@
 			path = Cash;
 			sourceTree = "<group>";
 		};
+		04F8259725488C1000D4A4EB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				046B54D02521F617000A5EF4 /* HelperView */,
+				04BBC447252342D3004D14B2 /* NavStack */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04F8259825488C1F00D4A4EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04F8259925488C2900D4A4EB /* Core */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04F8259925488C2900D4A4EB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04F8259A25488C7400D4A4EB /* ViewModels */,
+				04BBC45225235819004D14B2 /* Extensions */,
+				04BBC459252359A9004D14B2 /* Enums */,
+				04F825772546DC9F00D4A4EB /* ServiceLocator */,
+				04F8257C2546F6D100D4A4EB /* AppConfig */,
+				04F8257D2546FC8500D4A4EB /* Cash */,
+				04BBC49325239A37004D14B2 /* APIsServices */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		04F8259A25488C7400D4A4EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04F8259C25488CC700D4A4EB /* Recipes */,
+				04F8259B25488C8100D4A4EB /* Jobs */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04F8259B25488C8100D4A4EB /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				04E992C12525C22500F418C8 /* CurrentJobViewModel.swift */,
+				046B54FB252216BD000A5EF4 /* JobsViewModel.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		04F8259C25488CC700D4A4EB /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				04E992D62526024000F418C8 /* VegetablesRecipesViewModel.swift */,
+				04E992D42526020A00F418C8 /* FruitsRecipesViewModel.swift */,
+				046B54CC251F58FA000A5EF4 /* RecipesViewModel.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +341,9 @@
 			dependencies = (
 			);
 			name = HomeWork2;
+			packageProductDependencies = (
+				04F825AA2548987300D4A4EB /* OtusNetWork */,
+			);
 			productName = HomeWork2;
 			productReference = 046C964625134A0C008D580B /* HomeWork2.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +372,9 @@
 				Base,
 			);
 			mainGroup = 046C963D25134A0C008D580B;
+			packageReferences = (
+				04F825A92548987300D4A4EB /* XCRemoteSwiftPackageReference "OtusNetwork" */,
+			);
 			productRefGroup = 046C964725134A0C008D580B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,25 +402,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BBC4B025239A37004D14B2 /* APIHelper.swift in Sources */,
 				04E992E425260D1000F418C8 /* JobsScreenList.swift in Sources */,
 				04BBC46125235A48004D14B2 /* Screen.swift in Sources */,
-				04BBC4A225239A37004D14B2 /* SynchronizedDictionary.swift in Sources */,
-				04BBC4A125239A37004D14B2 /* CodableHelper.swift in Sources */,
 				04E992C42525D2B600F418C8 /* JobDescriptionScreen.swift in Sources */,
 				046B54FC252216BD000A5EF4 /* JobsViewModel.swift in Sources */,
 				04E992DE2526033D00F418C8 /* RecipeScreenRecipeCell.swift in Sources */,
-				04BBC4A425239A37004D14B2 /* JSONDataEncoding.swift in Sources */,
-				04BBC4A525239A37004D14B2 /* OpenISO8601DateFormatter.swift in Sources */,
 				04E992D1252601A000F418C8 /* RecipeSearchType.swift in Sources */,
 				04BBC449252342F2004D14B2 /* NavControllerView.swift in Sources */,
-				04BBC4AD25239A37004D14B2 /* Job.swift in Sources */,
-				04BBC49F25239A37004D14B2 /* Configuration.swift in Sources */,
 				046C964A25134A0C008D580B /* AppDelegate.swift in Sources */,
-				04BBC4AA25239A37004D14B2 /* Recipe.swift in Sources */,
 				046B54D22521F64F000A5EF4 /* ActivityIndicatorView.swift in Sources */,
 				046B54CD251F58FA000A5EF4 /* RecipesViewModel.swift in Sources */,
-				04BBC4AF25239A37004D14B2 /* URLSessionImplementations.swift in Sources */,
 				04BBC46325236940004D14B2 /* FakeNavBar.swift in Sources */,
 				04BBC45F25235A0B004D14B2 /* PopDestination.swift in Sources */,
 				04BBC4A725239A37004D14B2 /* JobsAPI.swift in Sources */,
@@ -444,7 +422,6 @@
 				04E992E625260D4300F418C8 /* JobsScreenJobCell.swift in Sources */,
 				04E992D72526024000F418C8 /* VegetablesRecipesViewModel.swift in Sources */,
 				04BBC4542523591B004D14B2 /* UIApplication.swift in Sources */,
-				04BBC4AE25239A37004D14B2 /* JSONEncodingHelper.swift in Sources */,
 				04BBC4A925239A37004D14B2 /* RecipeAPI.swift in Sources */,
 				04BBC45625235937004D14B2 /* UIDevice.swift in Sources */,
 				04E992C22525C22500F418C8 /* CurrentJobViewModel.swift in Sources */,
@@ -453,17 +430,12 @@
 				04E992E125260CCC00F418C8 /* CurrentJobScreen.swift in Sources */,
 				04F825792546DCC000D4A4EB /* ServiceLocator.swift in Sources */,
 				04E992D52526020A00F418C8 /* FruitsRecipesViewModel.swift in Sources */,
-				04BBC4A625239A37004D14B2 /* Extensions.swift in Sources */,
-				04BBC4A325239A37004D14B2 /* APIs.swift in Sources */,
-				04BBC4AB25239A37004D14B2 /* ErrorModel.swift in Sources */,
 				04F825832547121E00D4A4EB /* CashName.swift in Sources */,
 				04E992DA252602C900F418C8 /* FruitsRecipes.swift in Sources */,
 				04E992D3252601DF00F418C8 /* RandomAccessCollection.swift in Sources */,
 				046C964E25134A0C008D580B /* ContentView.swift in Sources */,
 				04C811C6252231DF0070D7AF /* JobsScreen.swift in Sources */,
 				04F8257B2546E2B700D4A4EB /* AppConfig.swift in Sources */,
-				04BBC4A025239A37004D14B2 /* Models.swift in Sources */,
-				04BBC4AC25239A37004D14B2 /* RecipeList.swift in Sources */,
 				04E992DC252602F400F418C8 /* VegetablesRecipes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +630,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04F825A92548987300D4A4EB /* XCRemoteSwiftPackageReference "OtusNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnnyVoolk/OtusNetwork.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04F825AA2548987300D4A4EB /* OtusNetWork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04F825A92548987300D4A4EB /* XCRemoteSwiftPackageReference "OtusNetwork" */;
+			productName = OtusNetWork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 046C963E25134A0C008D580B /* Project object */;
 }

@@ -21,7 +21,7 @@ struct CurrentJobScreen: View {
         VStack {
             if self.viewModel.isPageLoading {
                 ActivityIndicatorView(style: .medium)
-            } else {
+            } else { 
                 FakeNavBar(label: viewModel.job?.title ?? "", backAction: { self.viewModel.removeCashJob() })
                 Spacer()
                 Text(viewModel.job?.company ?? "")

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OtusNetWork
 
 class RecipesViewModel: ObservableObject {
     

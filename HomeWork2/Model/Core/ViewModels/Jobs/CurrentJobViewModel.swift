@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import OtusNetWork
 
 class CurrentJobViewModel: ObservableObject {
     

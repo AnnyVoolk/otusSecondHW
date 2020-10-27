@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "OtusNetWork",
+        "repositoryURL": "https://github.com/AnnyVoolk/OtusNetwork.git",
+        "state": {
+          "branch": "master",
+          "revision": "82e7d5aa93be1191ff3bfd221dabad4d4149cbd8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
