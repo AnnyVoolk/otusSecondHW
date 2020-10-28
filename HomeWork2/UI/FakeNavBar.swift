@@ -7,15 +7,16 @@
 //
 
 import SwiftUI
+import OtusUI
 
-struct FakeNavBar: View {
+public struct FakeNavBar: View {
     
     @EnvironmentObject private var viewModel: NavControllerViewModel
     
-    let label: String
-    var backAction: (() -> Void)? = nil
+    public let label: String
+    public var backAction: (() -> Void)? = nil
     
-    var body: some View {
+    public var body: some View {
         HStack(alignment: .center, spacing: 20) {
             HStack {
                 if viewModel.currentScreen != nil {
@@ -42,7 +43,7 @@ struct FakeNavBar: View {
         }
     }
     
-    var backView: some View {
+    public var backView: some View {
         ZStack {
             Rectangle()
                 .foregroundColor(.gray)

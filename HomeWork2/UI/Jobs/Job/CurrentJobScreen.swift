@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import OtusCore
+import OtusUI
 
 struct CurrentJobScreen: View {
     

@@ -6,8 +6,8 @@
 //  Copyright © 2020 mac. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
+import OtusCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
